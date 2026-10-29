@@ -23,7 +23,7 @@ Cada issue del proyecto indica en su descripción el RF que cubre.
 |---|---|---|
 | Backend | Josué Luis | Marcelo Guzman, Mauricio Zuñiga |
 | Dashboard web | Vicente Araya | Sebastián Hugueño, Daniel Castro |
-| Móvil | Maximiliano Mateo | Justin Vidaure |
+| Móvil | Maximiliano Mateo | Justin Vidaure | Jose Araya
 | Gestión y documentación | Ignacio Latorre | Johan Cortés |
 
 ## Documentación
