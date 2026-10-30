@@ -1,0 +1,40 @@
+name: Test BFF (Dart)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "master", "develop", "mobile_dev" ]
+    paths:
+      - 'mobile/bff/**'
+  pull_request:
+    branches: [ "main", "master", "develop", "mobile_dev" ]
+    paths:
+      - 'mobile/bff/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar SDK de Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 'stable'
+
+      - name: Instalar dependencias
+        run: |
+          cd mobile/bff
+          dart pub get
+
+      - name: Analizar código
+        run: |
+          cd mobile/bff
+          dart analyze
+
+      - name: Ejecutar pruebas unitarias
+        run: |
+          cd mobile/bff
+          dart test
